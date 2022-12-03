@@ -80,6 +80,7 @@ export default function Weather() {
           by Olha Podorozhna
         </small>
       </div>
+    
     </div>
   );
 }
