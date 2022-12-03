@@ -13,6 +13,7 @@ export default function Weather() {
   };
   return (
     <div className="Weather">
+      <div className="container">
       <div className="weather-wrap">
         <div className="weather-border">
           <form className="mb-4">
@@ -77,7 +78,7 @@ export default function Weather() {
           by Olha Podorozhna
         </small>
       </div>
-    
+      </div>
     </div>
   );
 }
