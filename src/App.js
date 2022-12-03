@@ -53,10 +53,7 @@ export default function Weather() {
                 <div className="float-left">
                   <strong>{weatherData.temperature}</strong>
                   <span className="units">
-                    <a href="" class="active">
-                      °C
-                    </a>
-                    |<a href="">°F</a>
+                      °C|°F
                   </span>
                 </div>
               </div>
@@ -73,7 +70,7 @@ export default function Weather() {
         <small>
           <a
             href="https://github.com/OlgaPodorozhnaya/weather-app-vanilla "
-            target="_blank"
+            target="_blank" rel="noreferrer"
           >
             Open-source code
           </a>
