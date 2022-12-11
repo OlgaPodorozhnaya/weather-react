@@ -10,7 +10,7 @@ let [city, setCity] = useState(props.defaultCity);
 const [ready, setReady] = useState(false);
 const [weatherData, setWeatherData] = useState({});
 function handleResponse (response) {
-    console.log(response.data);
+    // console.log(response.data);
     setWeatherData({temperature: response.data.main.temp,
                    wind: response.data.wind.speed,
                    city: response.data.name,
@@ -18,6 +18,7 @@ function handleResponse (response) {
                 humidity: response.data.main.humidity,
                 icon:response.data.weather[0].icon,
                 date: new Date(response.data.dt * 1000),
+                coordinates: response.data.coord,
                 
 
             });
@@ -46,7 +47,7 @@ if (ready){
     return (<div className="Weather">
     <form onSubmit={handleSubmit}>
         <div className="row">
-            <div class="col-9"> 
+            <div className="col-9"> 
             <input
                  type="search"
                   placeholder="Enter a city..."
@@ -55,7 +56,7 @@ if (ready){
                    onChange={handleCityChange}>
             </input>
             </div>
-            <div class="col-3"> 
+            <div className="col-3"> 
             <input type="submit"
                    value="Search" 
                    className="btn btn-primary w-100">
@@ -66,7 +67,7 @@ if (ready){
        
     </form>
 <WeatherInfo  data={weatherData}/>
-<WeatherForecast />
+<WeatherForecast coordinates={weatherData.coordinates}/>
 </div>
 )
 } else {
