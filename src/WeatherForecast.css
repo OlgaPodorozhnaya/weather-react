@@ -6,3 +6,7 @@
     opacity: 0.6;
     margin-left: 5px;
 }
+
+.WeatherForecastDay .WeatherForecast-day{
+  margin:10px 10px 10px 0;
+}
